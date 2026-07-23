@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,47 +8,32 @@
 <title>Aina Crea</title>
 
 <style>
+
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #fff9fb;
+    font-family: Arial, sans-serif;
+    background: #fff9fb;
     color: #5a454d;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 10%;
-    gap: 50px;
-}
-
-.foto {
-    width: 350px;
-    height: 450px;
-    background-color: #f6dfe7;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #9b7180;
-}
-
-.intro {
-    max-width: 500px;
+section {
+    padding: 70px 10%;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 55px;
     color: #d58aa3;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 h2 {
-    color: #d58aa3;
     text-align: center;
-    font-size: 35px;
-    margin-top: 50px;
+    font-size: 38px;
+    color: #d58aa3;
+}
+
+h3 {
+    color: #d58aa3;
 }
 
 p {
@@ -55,34 +41,69 @@ p {
     line-height: 1.7;
 }
 
-.seccio {
-    padding: 40px 10%;
+
+/* PRESENTACIÓ AINA */
+
+.presentacio {
+    display: flex;
+    align-items: center;
+    gap: 60px;
 }
 
-.projectes {
+.foto {
+    width: 350px;
+    height: 450px;
+    background: #f7dfe8;
+    border-radius: 35px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: #9b7180;
+}
+
+
+/* PROJECTE */
+
+.projecte {
+    background: white;
+    border-radius: 35px;
+    margin-top: 40px;
+}
+
+
+.frase {
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    color: #c47792;
+    margin: 30px 0;
+}
+
+
+/* PROJECTES */
+
+.targetes {
+    display: flex;
     justify-content: center;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
 .card {
-    width: 250px;
+    width: 260px;
     background: white;
-    border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 5px 20px #ead6dd;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px #ecd9df;
 }
 
-.card img {
-    width: 100%;
-    border-radius: 15px;
-}
+
+/* FORMULARI */
 
 .formulari {
-    background-color: #fbeaf0;
-    border-radius: 30px;
+    background: #fbeaf0;
     padding: 40px;
+    border-radius: 30px;
     max-width: 600px;
     margin: auto;
 }
@@ -91,156 +112,103 @@ input, textarea, select {
     width: 100%;
     padding: 12px;
     margin: 10px 0 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid #e5c5d0;
 }
 
 button {
-    background-color: #d58aa3;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
+    background: #d58aa3;
+    color:white;
+    border:0;
+    padding:15px 30px;
+    border-radius:20px;
 }
 
+
 footer {
-    text-align: center;
-    padding: 40px;
+    text-align:center;
+    padding:40px;
 }
+
+
 </style>
 
 </head>
 
+
 <body>
 
-<header>
+
+<!-- PRESENTACIÓ PERSONAL -->
+
+<section class="presentacio">
 
 <div class="foto">
-    FOTO TEVA
+FOTO AINA
 </div>
 
-<div class="intro">
-<h1>Aina Crea</h1>
+
+<div>
+
+<h1>Aina Puigmiquel Busquets</h1>
 
 <p>
-Aquí anirà l'explicació del teu projecte.
-Explica qui ets, què crees i què fa especial cada peça.
+Soc l’Aina, una persona curiosa, creativa i amb moltes ganes de donar vida a tot allò que imagino. Des de sempre m’ha agradat crear amb les mans, experimentar amb materials diferents i trobar la manera de convertir una idea en una realitat.
 </p>
 
 <p>
-Creacions fetes a mà, pensades per convertir idees en peces úniques.
+Per mi, crear és una forma d’expressar-me, de desconnectar i, sobretot, de connectar amb les persones. Crec que els petits detalls són els que acaben tenint més valor, perquè darrere de cada peça hi ha temps, dedicació i una història.
 </p>
 
-</div>
-
-</header>
-
-
-<section class="seccio">
-
-<h2>Els meus projectes</h2>
-
-<p style="text-align:center;">
-A poc a poc aniré compartint tots els projectes que vaig creant.
-Cada peça serà única i feta amb molta dedicació.
+<p>
+A través d’Aina Crea vull compartir aquesta passió i demostrar que una creació feta a mà pot transmetre molt més que un objecte: pot transmetre emocions, records i una part de la persona que l’ha imaginada.
 </p>
-
-
-<div class="projectes">
-
-<div class="card">
-<img src="https://via.placeholder.com/250">
-<h3>Projecte 1</h3>
-<p>Descripció del projecte.</p>
-</div>
-
-
-<div class="card">
-<img src="https://via.placeholder.com/250">
-<h3>Projecte 2</h3>
-<p>Descripció del projecte.</p>
-</div>
-
-
-<div class="card">
-<img src="https://via.placeholder.com/250">
-<h3>Projecte 3</h3>
-<p>Descripció del projecte.</p>
-</div>
 
 </div>
 
 </section>
 
 
-<section class="seccio">
 
-<h2>Creació de temporada</h2>
+<!-- PRESENTACIÓ PROJECTE -->
 
-<p style="text-align:center;">
-Aquí anunciaràs la creació especial del moment:
-Nadal, tardor, Castanyada, Sant Valentí...
-</p>
+<section class="projecte">
 
-</section>
+<h2>Aina Crea</h2>
 
 
-<section class="seccio">
-
-<h2>Fes la teva comanda</h2>
-
-
-<div class="formulari">
-
-<form>
-
-<label>Nom:</label>
-<input type="text">
-
-
-<label>Tipus de creació:</label>
-
-<select>
-
-<option>Ganxet (especialitat)</option>
-<option>Aquarel·la</option>
-<option>Argila polimèrica</option>
-<option>Espelma</option>
-<option>Ram de flors amb Pipe Cleaners</option>
-<option>Creació de temporada</option>
-
-</select>
-
-
-<label>Explica'm la teva idea:</label>
-
-<textarea rows="5"></textarea>
-
-
-<label>Correu electrònic:</label>
-
-<input type="email">
-
-
-<button>
-Enviar proposta
-</button>
-
-
-</form>
-
+<div class="foto" style="margin:auto;">
+FOTO AINA CREATIVA
 </div>
 
+
+<p class="frase">
+"D’una idea, una emoció i unes mans creatives neix una peça única pensada especialment per a tu."
+</p>
+
+
+<p>
+Aina Crea neix de la passió per crear amb les mans i transformar idees en peces úniques. Un projecte artesanal on la creativitat i els petits detalls són els protagonistes.
+</p>
+
+
+<p>
+Cada creació és feta a mà i personalitzada, combinant tècniques, materials i estils diferents per donar vida a peces amb ànima, pensades per regalar, decorar o fer especial qualsevol moment.
+</p>
+
+
+<p>
+M’agrada escoltar les idees de cada persona, entendre què vol transmetre i convertir-les en una creació única que connecti amb una història, un record o una emoció.
+</p>
+
+
 </section>
 
+
+
+<!-- AQUI ANIRAN PROJECTES, TEMPORADA, FORMULARI I CONTACTE -->
 
 <footer>
-
-<p>
-Gràcies per confiar en Aina Crea 🤍
-</p>
 
 <p>
 Contacte: elteucorreu@gmail.com
