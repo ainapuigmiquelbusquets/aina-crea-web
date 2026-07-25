@@ -710,17 +710,19 @@ La teva idea és el punt de partida. Junts li donarem forma.
 
 
 
-<div class="formulari">
+<form class="formulari" action="https://formspree.io/f/mpqvojbn" method="POST">
 
 
-<input type="text" placeholder="Nom">
+<input 
+type="text" 
+name="Nom"
+placeholder="Nom"
+required>
 
 
+<select name="Tipus de creació" required>
 
-<select>
-
-
-<option>Tipus de creació</option>
+<option value="">Tipus de creació</option>
 
 <option>🧶 Ganxet (especialitat)</option>
 
@@ -733,6 +735,32 @@ La teva idea és el punt de partida. Junts li donarem forma.
 <option>🌸 Ram de flors amb Pipe Cleaners</option>
 
 <option>✨ Creació de temporada</option>
+
+</select>
+
+
+
+<textarea 
+name="Descripció de la idea"
+placeholder="Descripció de la idea"
+required></textarea>
+
+
+
+<input 
+type="email" 
+name="Correu"
+placeholder="Correu"
+required>
+
+
+
+<button type="submit">
+Enviar idea
+</button>
+
+
+</form>
 
 
 </select>
