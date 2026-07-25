@@ -710,7 +710,11 @@ La teva idea és el punt de partida. Junts li donarem forma.
 
 
 
-<form class="formulari" action="https://formspree.io/f/mpqvojbn" method="POST">
+<form 
+class="formulari" 
+action="https://formspree.io/f/mpqvojbn" 
+method="POST"
+id="formulari-lumesis">
 
 
 <input 
@@ -756,7 +760,7 @@ required>
 
 
 <button type="submit">
-Enviar idea
+Enviar
 </button>
 
 
@@ -825,7 +829,54 @@ Enviar idea
 
 
 
+<script>
 
+const formulari = document.getElementById("formulari-lumesis");
+
+formulari.addEventListener("submit", async function(event){
+
+event.preventDefault();
+
+
+const dades = new FormData(formulari);
+
+
+const resposta = await fetch(formulari.action, {
+
+method: "POST",
+
+body: dades,
+
+headers: {
+
+'Accept': 'application/json'
+
+}
+
+});
+
+
+if(resposta.ok){
+
+formulari.innerHTML = `
+
+<div style="text-align:center; padding:30px;">
+
+<h2>Gràcies per contactar amb Lumesis 🤍</h2>
+
+<p>
+He rebut la teva idea i em posaré en contacte amb tu per acabar de definir tots els detalls i crear una peça única pensada especialment per a tu.
+</p>
+
+</div>
+
+`;
+
+}
+
+});
+
+</script>
 </body>
 
 </html>
