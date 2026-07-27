@@ -372,29 +372,90 @@ p {
 }
 
 .carrusel {
+
 display: flex;
+
 align-items: center;
+
 justify-content: center;
-gap: 15px;
+
+gap: 18px;
+
 }
 
 
-.carrusel img {
+.foto-carrusel {
+
+position: relative;
+
 width: 100%;
-height: 300px;
-object-fit: cover;
-border-radius: 25px;
+
 }
 
 
-.carrusel button {
-background: #c9a46c;
+.foto-carrusel img {
+
+width: 100%;
+
+height: 350px;
+
+object-fit: cover;
+
+border-radius: 30px;
+
+transition: opacity 0.4s ease;
+
+}
+
+
+
+.fletxa {
+
+background: transparent;
+
 border: none;
-color: white;
-border-radius: 50%;
-width: 40px;
-height: 40px;
+
+font-size: 45px;
+
+font-family: Georgia, serif;
+
+color: #b88b62;
+
 cursor: pointer;
+
+padding: 5px;
+
+transition: transform 0.3s ease;
+
+}
+
+
+.fletxa:hover {
+
+transform: scale(1.15);
+
+}
+
+
+
+#contador {
+
+position: absolute;
+
+bottom: 15px;
+
+right: 15px;
+
+background: rgba(255,255,255,0.8);
+
+padding: 6px 14px;
+
+border-radius: 20px;
+
+font-size: 14px;
+
+color: #8b6b55;
+
 }
 </style>
 
