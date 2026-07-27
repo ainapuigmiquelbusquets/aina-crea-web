@@ -435,15 +435,15 @@ top: 50%;
 
 transform: translateY(-50%);
 
-background: rgba(250,246,240,0.9);
+background: rgba(255,255,255,0.45);
 
 border: none;
 
 color: #b88b62;
 
-width: 45px;
+width: 40px;
 
-height: 45px;
+height: 40px;
 
 border-radius: 50%;
 
@@ -1041,31 +1041,6 @@ document.getElementById("contador").innerHTML =
 
 },200);
 
-
-}
-
-
-fotoActual = fotoActual + direccio;
-
-
-
-if(fotoActual < 0){
-
-fotoActual = fotosProjecte1.length - 1;
-
-}
-
-
-
-if(fotoActual >= fotosProjecte1.length){
-
-fotoActual = 0;
-
-}
-
-
-
-document.getElementById("contador").innerHTML = (fotoActual + 1) + " / " + fotosProjecte1.length;
 
 }
 
