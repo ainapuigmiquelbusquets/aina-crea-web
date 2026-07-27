@@ -522,7 +522,34 @@ Cada peça és única i està feta pensant en la persona, l’ocasió i el signi
 </div>
 
 
+<div class="card">
+
+
+<div class="carrusel">
+
+
+<button onclick="canviarFoto(-1)">←</button>
+
+
+<img id="foto-projecte1" src="projecte1.1" alt="Projecte Lumesis">
+
+
+<button onclick="canviarFoto(1)">→</button>
+
+
+</div>
+
+
+
 <h3>Projecte 1</h3>
+
+
+<p>
+Descripció de la creació: materials utilitzats, història de la peça i què la fa especial.
+</p>
+
+
+</div>
 
 
 <p>
@@ -831,6 +858,58 @@ He rebut la teva idea i em posaré en contacte amb tu per acabar de definir tots
 }
 
 });
+
+</script>
+    <script>
+
+
+let fotosProjecte1 = [
+
+"projecte1.1",
+
+"projecte1.2",
+
+"projecte1.3",
+
+"projecte1.4",
+
+"projecte1.5"
+
+];
+
+
+let fotoActual = 0;
+
+
+
+function canviarFoto(direccio){
+
+
+fotoActual = fotoActual + direccio;
+
+
+
+if(fotoActual < 0){
+
+fotoActual = fotosProjecte1.length - 1;
+
+}
+
+
+
+if(fotoActual >= fotosProjecte1.length){
+
+fotoActual = 0;
+
+}
+
+
+
+document.getElementById("foto-projecte1").src = fotosProjecte1[fotoActual];
+
+
+}
+
 
 </script>
 </body>
