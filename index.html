@@ -367,7 +367,25 @@ p {
     font-size: 20px;
 
 }
+.carrusel {
 
+gap: 5px;
+
+}
+
+
+.foto-carrusel img {
+
+height: 260px;
+
+}
+
+
+.fletxa {
+
+font-size: 35px;
+
+}
 
 }
 
@@ -969,8 +987,7 @@ fotoActual = 0;
 
 
 
-document.getElementById("foto-projecte1").src = fotosProjecte1[fotoActual];
-
+document.getElementById("contador").innerHTML = (fotoActual + 1) + " / " + fotosProjecte1.length;
 
 }
 
