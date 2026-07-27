@@ -429,24 +429,60 @@ transition: opacity 0.4s ease;
 
 .fletxa {
 
-background: transparent;
+position: absolute;
+
+top: 50%;
+
+transform: translateY(-50%);
+
+background: rgba(250,246,240,0.9);
 
 border: none;
 
-font-size: 45px;
+color: #b88b62;
+
+width: 45px;
+
+height: 45px;
+
+border-radius: 50%;
+
+font-size: 35px;
 
 font-family: Georgia, serif;
 
-color: #b88b62;
-
 cursor: pointer;
 
-padding: 5px;
+display: flex;
 
-transition: transform 0.3s ease;
+align-items: center;
+
+justify-content: center;
+
+transition: 0.3s ease;
 
 }
 
+
+.fletxa:hover {
+
+transform: translateY(-50%) scale(1.1);
+
+}
+
+
+.esquerra {
+
+left: 15px;
+
+}
+
+
+.dreta {
+
+right: 15px;
+
+}
 
 .fletxa:hover {
 
@@ -619,17 +655,19 @@ Cada peça és única i està feta pensant en la persona, l’ocasió i el signi
 
 <div class="carrusel">
 
-<button class="fletxa" onclick="canviarFoto(-1)">‹</button>
-
 <div class="foto-carrusel">
 
 <img id="foto-projecte1" src="projecte1.1" alt="Projecte Lumesis">
 
+
+<button class="fletxa esquerra" onclick="canviarFoto(-1)">‹</button>
+
+<button class="fletxa dreta" onclick="canviarFoto(1)">›</button>
+
+
 <div id="contador">1 / 5</div>
 
 </div>
-
-<button class="fletxa" onclick="canviarFoto(1)">›</button>
 
 </div>
 
