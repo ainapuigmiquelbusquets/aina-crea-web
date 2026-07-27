@@ -1008,6 +1008,46 @@ function canviarFoto(direccio){
 fotoActual = fotoActual + direccio;
 
 
+if(fotoActual < 0){
+
+fotoActual = fotosProjecte1.length - 1;
+
+}
+
+
+if(fotoActual >= fotosProjecte1.length){
+
+fotoActual = 0;
+
+}
+
+
+let imatge = document.getElementById("foto-projecte1");
+
+
+imatge.style.opacity = "0";
+
+
+setTimeout(function(){
+
+imatge.src = fotosProjecte1[fotoActual];
+
+imatge.style.opacity = "1";
+
+
+document.getElementById("contador").innerHTML = 
+(fotoActual + 1) + " / " + fotosProjecte1.length;
+
+
+},200);
+
+
+}
+
+
+fotoActual = fotoActual + direccio;
+
+
 
 if(fotoActual < 0){
 
