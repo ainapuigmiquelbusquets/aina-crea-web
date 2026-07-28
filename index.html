@@ -576,7 +576,8 @@ transform: scale(1.15);
 
 
 #contador,
-#contador2 {
+#contador2,
+#contador4 {
 
 position: absolute;
 
@@ -1328,42 +1329,50 @@ function canviarProjecteMobil(direccio){
 
 }
 </script>
-    let fotosProjecte4 = [
+
+<script>
+
+let fotosProjecte4 = [
+
 "projecte4.1",
 "projecte4.2",
 "projecte4.3",
 "projecte4.4"
-];
 
+];
 
 let fotoActual4 = 0;
 
-
 function canviarFoto4(direccio){
 
-fotoActual4 += direccio;
+    fotoActual4 += direccio;
 
+    if(fotoActual4 < 0){
+        fotoActual4 = fotosProjecte4.length - 1;
+    }
 
-if(fotoActual4 < 0){
-fotoActual4 = fotosProjecte4.length - 1;
+    if(fotoActual4 >= fotosProjecte4.length){
+        fotoActual4 = 0;
+    }
+
+    let imatge = document.getElementById("foto-projecte4");
+
+    imatge.style.opacity = "0";
+
+    setTimeout(function(){
+
+        imatge.src = fotosProjecte4[fotoActual4];
+
+        imatge.style.opacity = "1";
+
+        document.getElementById("contador4").innerHTML =
+        (fotoActual4 + 1) + " / " + fotosProjecte4.length;
+
+    },200);
+
 }
 
-
-if(fotoActual4 >= fotosProjecte4.length){
-fotoActual4 = 0;
-}
-
-
-let imatge = document.getElementById("foto-projecte4");
-
-
-imatge.src = fotosProjecte4[fotoActual4];
-
-
-document.getElementById("contador4").innerHTML =
-(fotoActual4 + 1) + " / " + fotosProjecte4.length;
-
-}
+</script>
 </body>
 
 </html>
