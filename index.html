@@ -1345,14 +1345,18 @@ let fotoActual4 = 0;
 
 function canviarFoto4(direccio){
 
-    fotoActual4 += direccio;
+    fotoActual4 = fotoActual4 + direccio;
 
     if(fotoActual4 < 0){
+
         fotoActual4 = fotosProjecte4.length - 1;
+
     }
 
     if(fotoActual4 >= fotosProjecte4.length){
+
         fotoActual4 = 0;
+
     }
 
     let imatge = document.getElementById("foto-projecte4");
