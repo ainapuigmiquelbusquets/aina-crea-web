@@ -1292,47 +1292,6 @@ let fotosProjecte2 = [
 let fotoActual2 = 0;
 
 
-function canviarFoto2(direccio){
-
-
-fotoActual2 = fotoActual2 + direccio;
-
-
-if(fotoActual2 < 0){
-
-fotoActual2 = fotosProjecte2.length - 1;
-
-}
-
-
-if(fotoActual2 >= fotosProjecte2.length){
-
-fotoActual2 = 0;
-
-}
-
-
-let imatge = document.getElementById("foto-projecte2");
-
-
-imatge.style.opacity = "0";
-
-
-setTimeout(function(){
-
-imatge.src = fotosProjecte2[fotoActual2];
-
-imatge.style.opacity = "1";
-
-
-document.getElementById("contador2").innerHTML =
-(fotoActual2 + 1) + " / " + fotosProjecte2.length;
-
-
-},200);
-
-
-}
 let paginaProjectes = 0;
 
 
@@ -1340,38 +1299,44 @@ function canviarProjecteMobil(direccio){
 
     const projectes = document.querySelectorAll(".projectes .card");
 
+    const projectesPerPagina = 3;
 
-    if(direccio === 1){
+    const totalPagines = Math.ceil(projectes.length / projectesPerPagina);
 
-        paginaProjectes = 1;
 
-    } else {
+    paginaProjectes += direccio;
+
+
+    if(paginaProjectes >= totalPagines){
 
         paginaProjectes = 0;
 
     }
 
 
-    if(paginaProjectes === 0){
+    if(paginaProjectes < 0){
 
-        projectes.forEach((projecte, index)=>{
-
-            projecte.style.display = index < 3 ? "block" : "none";
-
-        });
+        paginaProjectes = totalPagines - 1;
 
     }
 
 
-    if(paginaProjectes === 1){
+    projectes.forEach((projecte, index)=>{
 
-        projectes.forEach((projecte, index)=>{
+        const pagina = Math.floor(index / projectesPerPagina);
 
-            projecte.style.display = index >= 3 ? "block" : "none";
 
-        });
+        if(pagina === paginaProjectes){
 
-    }
+            projecte.style.display = "block";
+
+        } else {
+
+            projecte.style.display = "none";
+
+        }
+
+    });
 
 }
 </script>
