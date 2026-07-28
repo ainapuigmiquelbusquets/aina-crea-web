@@ -449,6 +449,13 @@ font-size: 35px;
     font-style: italic;
 
 }
+    .fletxes-projectes {
+
+    display: flex;
+
+    gap: 20px;
+
+}
 }
 
 .carrusel {
@@ -788,11 +795,21 @@ Aquestes arracades neixen d’una idea senzilla: transformar un material com l�
 
 <div class="navegacio-projectes">
 
-<button class="projecte-fletxa" onclick="canviarProjecteMobil()">
+<div class="fletxes-projectes">
+
+<button class="projecte-fletxa" onclick="canviarProjecteMobil(-1)">
+    ←
+</button>
+
+
+<button class="projecte-fletxa" onclick="canviarProjecteMobil(1)">
     →
 </button>
 
-<p>Llisca</p>
+</div>
+
+
+<p>Desllisca</p>
 
 </div>
 
@@ -1218,7 +1235,7 @@ document.getElementById("contador2").innerHTML =
 let projecteMobilActual = 0;
 
 
-function canviarProjecteMobil(){
+function canviarProjecteMobil(direccio){
 
     const projectes = document.querySelectorAll(".projectes .card");
 
@@ -1226,7 +1243,14 @@ function canviarProjecteMobil(){
     projectes[projecteMobilActual].style.display = "none";
 
 
-    projecteMobilActual++;
+    projecteMobilActual += direccio;
+
+
+    if(projecteMobilActual < 0){
+
+        projecteMobilActual = projectes.length - 1;
+
+    }
 
 
     if(projecteMobilActual >= projectes.length){
