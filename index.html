@@ -78,6 +78,50 @@
     color: #b88b62;
 
 }
+    .baixar-formulari {
+
+    position: fixed;
+
+    right: 35px;
+
+    bottom: 35px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.55);
+
+    color: #b88b62;
+
+    border: none;
+
+    font-size: 35px;
+
+    font-family: Georgia, serif;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 999;
+
+    transition: 0.3s ease;
+
+}
+
+
+.baixar-formulari:hover {
+
+    transform: scale(1.1);
+
+}
 /* GENERAL */
 
 * {
@@ -90,6 +134,9 @@ body {
     font-family: "Arial", sans-serif;
     color: #5b4a4a;
 }
+    <button class="baixar-formulari" onclick="anarComandes()">
+    ↓
+</button>
 html {
 
     scroll-behavior: smooth;
@@ -1506,6 +1553,13 @@ function canviarFoto4(direccio){
 }
 
 </script>
+    function anarComandes(){
+
+    document.getElementById("comandes").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
 </body>
 
 </html>
