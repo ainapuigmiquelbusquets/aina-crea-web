@@ -189,7 +189,7 @@ p {
 
     gap: 30px;
 
-    flex-wrap: wrap;
+    overflow: hidden;
 
 }
 
@@ -198,7 +198,7 @@ p {
 
     background: white;
 
-flex: 0 0 calc((100% - 60px) / 3);
+    flex: 0 0 calc((100% - 60px) / 3);
 
     padding: 25px;
 
@@ -593,6 +593,15 @@ border-radius: 20px;
 font-size: 14px;
 
 color: #8b6b55;
+
+}
+    @media(min-width:769px){
+
+.projectes .card:nth-child(n+4){
+
+    display:none;
+
+}
 
 }
 </style>
@@ -1295,7 +1304,7 @@ document.getElementById("contador2").innerHTML =
 
 
 }
-let projecteMobilActual = 0;
+let paginaProjectes = 0;
 
 
 function canviarProjecteMobil(direccio){
@@ -1303,27 +1312,37 @@ function canviarProjecteMobil(direccio){
     const projectes = document.querySelectorAll(".projectes .card");
 
 
-    projectes[projecteMobilActual].style.display = "none";
+    if(direccio === 1){
 
+        paginaProjectes = 1;
 
-    projecteMobilActual += direccio;
+    } else {
 
-
-    if(projecteMobilActual < 0){
-
-        projecteMobilActual = projectes.length - 1;
+        paginaProjectes = 0;
 
     }
 
 
-    if(projecteMobilActual >= projectes.length){
+    if(paginaProjectes === 0){
 
-        projecteMobilActual = 0;
+        projectes.forEach((projecte, index)=>{
+
+            projecte.style.display = index < 3 ? "block" : "none";
+
+        });
 
     }
 
 
-    projectes[projecteMobilActual].style.display = "block";
+    if(paginaProjectes === 1){
+
+        projectes.forEach((projecte, index)=>{
+
+            projecte.style.display = index >= 3 ? "block" : "none";
+
+        });
+
+    }
 
 }
 </script>
