@@ -293,7 +293,7 @@ button {
 
 /* MOBIL */
 
-.projecte-seguent {
+.navegacio-projectes {
 
     display: none;
 
@@ -398,11 +398,20 @@ font-size: 35px;
     display: none;
 
 }
-    .projecte-seguent {
+    .navegacio-projectes {
 
-    display: block;
+    display: flex;
 
-    margin: 25px auto;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+}
+
+
+.projecte-fletxa {
 
     background-color: #c9a46c;
 
@@ -412,16 +421,34 @@ font-size: 35px;
 
     border-radius: 50%;
 
-    width: 50px;
+    width: 65px;
 
-    height: 50px;
+    height: 65px;
 
-    font-size: 35px;
+    font-size: 38px;
 
-    line-height: 40px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    line-height: 1;
 
 }
 
+
+.navegacio-projectes p {
+
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    color: #b88b62;
+
+    font-style: italic;
+
+}
 }
 
 .carrusel {
@@ -759,9 +786,15 @@ Aquestes arracades neixen d’una idea senzilla: transformar un material com l�
     
 </div>
 
-<button class="projecte-seguent" onclick="canviarProjecteMobil()">
-    ›
+<div class="navegacio-projectes">
+
+<button class="projecte-fletxa" onclick="canviarProjecteMobil()">
+    →
 </button>
+
+<p>Desllisca</p>
+
+</div>
 
 </section>
 
