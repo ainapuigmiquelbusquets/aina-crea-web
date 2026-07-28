@@ -198,7 +198,7 @@ p {
 
     background: white;
 
-    width: 300px;
+    width: calc(33.333% - 30px);
 
     padding: 25px;
 
@@ -295,7 +295,16 @@ button {
 
 .navegacio-projectes {
 
-    display: none;
+    display: flex;
+
+}
+    @media(max-width:1100px){
+
+.card {
+
+    width: calc(50% - 30px);
+
+}
 
 }
 @media(max-width:768px){
