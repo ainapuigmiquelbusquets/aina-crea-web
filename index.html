@@ -1299,44 +1299,81 @@ function canviarProjecteMobil(direccio){
 
     const projectes = document.querySelectorAll(".projectes .card");
 
-    const projectesPerPagina = 3;
 
-    const totalPagines = Math.ceil(projectes.length / projectesPerPagina);
+    // MÒBIL: un projecte cada vegada
+    if(window.innerWidth <= 768){
 
-
-    paginaProjectes += direccio;
-
-
-    if(paginaProjectes >= totalPagines){
-
-        paginaProjectes = 0;
-
-    }
+        let projecteActual = Array.from(projectes).findIndex(
+            projecte => projecte.style.display === "block"
+        );
 
 
-    if(paginaProjectes < 0){
-
-        paginaProjectes = totalPagines - 1;
-
-    }
+        if(projecteActual === -1){
+            projecteActual = 0;
+        }
 
 
-    projectes.forEach((projecte, index)=>{
-
-        const pagina = Math.floor(index / projectesPerPagina);
+        projectes[projecteActual].style.display = "none";
 
 
-        if(pagina === paginaProjectes){
+        projecteActual += direccio;
 
-            projecte.style.display = "block";
 
-        } else {
+        if(projecteActual >= projectes.length){
 
-            projecte.style.display = "none";
+            projecteActual = 0;
 
         }
 
-    });
+
+        if(projecteActual < 0){
+
+            projecteActual = projectes.length - 1;
+
+        }
+
+
+        projectes[projecteActual].style.display = "block";
+
+
+    } 
+
+
+    // ORDINADOR: grups de 3
+    else {
+
+        const projectesPerPagina = 3;
+
+        const totalPagines = Math.ceil(projectes.length / projectesPerPagina);
+
+
+        paginaProjectes += direccio;
+
+
+        if(paginaProjectes >= totalPagines){
+
+            paginaProjectes = 0;
+
+        }
+
+
+        if(paginaProjectes < 0){
+
+            paginaProjectes = totalPagines - 1;
+
+        }
+
+
+        projectes.forEach((projecte, index)=>{
+
+            const pagina = Math.floor(index / projectesPerPagina);
+
+
+            projecte.style.display = pagina === paginaProjectes ? "block" : "none";
+
+        });
+
+    }
 
 }
 </script>
