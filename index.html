@@ -1182,7 +1182,30 @@ document.getElementById("contador2").innerHTML =
 
 
 }
+let projecteMobilActual = 0;
 
+
+function canviarProjecteMobil(){
+
+    const projectes = document.querySelectorAll(".projectes .card");
+
+
+    projectes[projecteMobilActual].style.display = "none";
+
+
+    projecteMobilActual++;
+
+
+    if(projecteMobilActual >= projectes.length){
+
+        projecteMobilActual = 0;
+
+    }
+
+
+    projectes[projecteMobilActual].style.display = "block";
+
+}
 </script>
 </body>
 
