@@ -11,7 +11,73 @@
 
 <style>
 
+/* MENU */
 
+.menu {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(250,246,240,0.85);
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 10%;
+
+    z-index: 1000;
+
+}
+
+
+.logo-menu {
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    color: #b88b62;
+
+}
+
+
+.enllacos-menu {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.enllacos-menu a {
+
+    text-decoration: none;
+
+    color: #5b4a4a;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+}
+
+
+.enllacos-menu a:hover {
+
+    color: #b88b62;
+
+}
 /* GENERAL */
 
 * {
@@ -24,7 +90,11 @@ body {
     font-family: "Arial", sans-serif;
     color: #5b4a4a;
 }
+html {
 
+    scroll-behavior: smooth;
+
+}
 
 /* SECCIONS */
 
@@ -640,13 +710,29 @@ color: #8b6b55;
 
 
 <body>
+    <nav class="menu">
+
+    <div class="logo-menu">
+        Lumesis
+    </div>
+
+    <div class="enllacos-menu">
+
+        <a href="#inici">Inici</a>
+        <a href="#significat">Significat</a>
+        <a href="#projectes">Projectes</a>
+        <a href="#comandes">Comandes</a>
+        <a href="#contacte">Contacte</a>
+
+    </div>
+
+</nav>
 
 
 <!-- INICI -->
 
 
-<section class="inici">
-
+<section class="inici" id="inici">
 
 <div class="inici-contenidor">
 
@@ -696,8 +782,7 @@ M’agrada escoltar les idees de cada persona, entendre què vol transmetre i co
 <!-- SIGNIFICAT DE LUMESIS -->
 
 
-<section class="significat">
-
+<section class="significat" id="significat">
 
 <div class="significat-contenidor">
 
@@ -751,8 +836,7 @@ Cada creació porta una mica de llum, imaginació i dedicació.
 <!-- PROJECTES -->
 
 
-<section class="projectes">
-
+<section class="projectes" id="projectes">
 
 <h2>Els meus projectes</h2>
 
@@ -1035,8 +1119,7 @@ A través de Lumesis vull compartir aquesta passió i demostrar que una creació
 <!-- COMANDES -->
 
 
-<section class="comandes">
-
+<section class="comandes" id="comandes">
 
 <h2>Comandes</h2>
 
@@ -1144,8 +1227,7 @@ Enviar
 <!-- CONTACTE -->
 
 
-<section class="contacte">
-
+<section class="contacte" id="contacte">
 
 <h2>Contacte</h2>
 
