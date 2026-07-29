@@ -778,6 +778,25 @@ color: #8b6b55;
 }
 
 }
+    /* ANIMACIONS */
+
+.animar {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition: opacity 0.8s ease, transform 0.8s ease;
+
+}
+
+.animar.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
 </style>
 
 
@@ -807,8 +826,7 @@ color: #8b6b55;
 <!-- INICI -->
 
 
-<section class="inici" id="inici">
-
+<section class="inici animar" id="inici">
 <div class="inici-contenidor">
 
 
@@ -857,8 +875,7 @@ M’agrada escoltar les idees de cada persona, entendre què vol transmetre i co
 <!-- SIGNIFICAT DE LUMESIS -->
 
 
-<section class="significat" id="significat">
-
+<section class="significat animar" id="significat">
 <div class="significat-contenidor">
 
 
@@ -911,8 +928,7 @@ Cada creació porta una mica de llum, imaginació i dedicació.
 <!-- PROJECTES -->
 
 
-<section class="projectes" id="projectes">
-
+<section class="projectes animar" id="projectes">
 <h2>Els meus projectes</h2>
 
 
@@ -1084,8 +1100,7 @@ Una peça orgànica amb acabat brillant que fa que cada parell sigui únic, insp
 <!-- CREACIÓ DE TEMPORADA -->
 
 
-<section class="temporada">
-
+<section class="temporada animar">
 
 <h2>Creació de temporada</h2>
 
@@ -1140,8 +1155,7 @@ Estrelles de mar, peixos, petxines, cavallets de mar... qualsevol idea pot conve
 <!-- AINA -->
 
 
-<section class="aina">
-
+<section class="aina animar">
 
 <div class="inici-contenidor">
 
@@ -1194,8 +1208,7 @@ A través de Lumesis vull compartir aquesta passió i demostrar que una creació
 <!-- COMANDES -->
 
 
-<section class="comandes" id="comandes">
-
+<section class="comandes animar" id="comandes">
 <h2>Comandes</h2>
 
 
@@ -1295,8 +1308,7 @@ Enviar
 <!-- CONTACTE -->
 
 
-<section class="contacte" id="contacte">
-
+<section class="contacte animar" id="contacte">
 <h2>Contacte</h2>
 
 
@@ -1600,6 +1612,31 @@ function canviarFoto4(direccio){
 }
 
 </script>
+    const elementsAnimats = document.querySelectorAll(".animar");
+
+const observer = new IntersectionObserver((entrades) => {
+
+    entrades.forEach((entrada) => {
+
+        if (entrada.isIntersecting) {
+
+            entrada.target.classList.add("visible");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
+
+});
+
+elementsAnimats.forEach((element) => {
+
+    observer.observe(element);
+
+});
 </body>
 
 </html>
