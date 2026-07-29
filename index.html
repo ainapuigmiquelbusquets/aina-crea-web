@@ -897,11 +897,15 @@ color: #8b6b55;
 
     <div class="enllacos-menu">
 
-        <a href="#inici">Inici</a>
-        <a href="#significat">Significat</a>
-        <a href="#projectes">Projectes</a>
-        <a href="#comandes">Comandes</a>
-        <a href="#contacte">Contacte</a>
+<a id="menu-inici" href="#inici">Inici</a>
+
+<a id="menu-significat" href="#significat">Significat</a>
+
+<a id="menu-projectes" href="#projectes">Projectes</a>
+
+<a id="menu-comandes" href="#comandes">Comandes</a>
+
+<a id="menu-contacte" href="#contacte">Contacte</a>
   <div class="idiomes">
 
     <span onclick="canviarIdioma('ca')">CAT</span> |
@@ -1705,7 +1709,7 @@ function canviarFoto4(direccio){
 }
 
 </script>
-    <script>
+  <script>
 
 let idiomaActual = "ca";
 
@@ -1714,7 +1718,57 @@ function canviarIdioma(idioma){
 
     idiomaActual = idioma;
 
-    console.log("Idioma seleccionat:", idiomaActual);
+
+    const textos = {
+
+        ca: {
+            inici: "Inici",
+            significat: "Significat",
+            projectes: "Projectes",
+            comandes: "Comandes",
+            contacte: "Contacte"
+        },
+
+
+        es: {
+            inici: "Inicio",
+            significat: "Significado",
+            projectes: "Proyectos",
+            comandes: "Pedidos",
+            contacte: "Contacto"
+        },
+
+
+        en: {
+            inici: "Home",
+            significat: "Meaning",
+            projectes: "Projects",
+            comandes: "Orders",
+            contacte: "Contact"
+        },
+
+
+        fr: {
+            inici: "Accueil",
+            significat: "Signification",
+            projectes: "Projets",
+            comandes: "Commandes",
+            contacte: "Contact"
+        }
+
+    };
+
+
+    document.getElementById("menu-inici").innerHTML = textos[idioma].inici;
+
+    document.getElementById("menu-significat").innerHTML = textos[idioma].significat;
+
+    document.getElementById("menu-projectes").innerHTML = textos[idioma].projectes;
+
+    document.getElementById("menu-comandes").innerHTML = textos[idioma].comandes;
+
+    document.getElementById("menu-contacte").innerHTML = textos[idioma].contacte;
+
 
 }
 
