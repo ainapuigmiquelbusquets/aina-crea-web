@@ -1773,7 +1773,10 @@ function canviarIdioma(idioma){
 }
 
 </script>
-    const elementsAnimats = document.querySelectorAll(".animar");
+
+<script>
+
+const elementsAnimats = document.querySelectorAll(".animar");
 
 const observer = new IntersectionObserver((entrades) => {
 
@@ -1793,11 +1796,15 @@ const observer = new IntersectionObserver((entrades) => {
 
 });
 
+
 elementsAnimats.forEach((element) => {
 
     observer.observe(element);
 
 });
+
+</script>
+
 </body>
 
 </html>
