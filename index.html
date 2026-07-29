@@ -1067,9 +1067,8 @@ Cada peça és única i està feta pensant en la persona, l’ocasió i el signi
 </div>
 
 
-<h3>Non-Non Bam </h3>
-
-<p>
+<h3 id="nom-projecte-1">Non-Non Bam</h3>
+<p id="descripcio-projecte-1">
 En Bam és una manteta de companyia feta a mà amb ganxet, creada per acompanyar els més petits en els seus moments de calma i descans.
 
 Una peça única, feta punt a punt amb dedicació, pensada per transmetre tendresa i convertir-se en un petit record especial.
@@ -1100,12 +1099,11 @@ Una peça única, feta punt a punt amb dedicació, pensada per transmetre tendre
 </div>
 
 
-<h3>Arracades Thaila</h3>
+<h3 id="nom-projecte-2">Arracades Thaila</h3>
 
-
-<p>
+<p id="descripcio-projecte-2">
 Una peça creada per aportar color, alegria i personalitat a qualsevol moment. 
-Aquestes arracades neixen d’una idea senzilla: transformar un material com l’argila polimèrica en un petit detall capaç de transmetre emocions.
+Aquestes arracades neixen d’una idea senzilla: transformar un material com l’argila polimèrmica en un petit detall capaç de transmetre emocions.
 </p>
 
 
@@ -1733,6 +1731,9 @@ textProjectes2: "Cada peça és única i està feta pensant en la persona, l’o
         nomProjecte1: "Non-Non Bam",
 
 descripcioProjecte1: "En Bam és una manteta de companyia feta a mà amb ganxet, creada per acompanyar els més petits en els seus moments de calma i descans. Una peça única, feta punt a punt amb dedicació, pensada per transmetre tendresa i convertir-se en un petit record especial.",
+        nomProjecte2: "Arracades Thaila",
+
+descripcioProjecte2: "Una peça creada per aportar color, alegria i personalitat a qualsevol moment. Aquestes arracades neixen d’una idea senzilla: transformar un material com l’argila polimèrica en un petit detall capaç de transmetre emocions.",
         titolSignificat: "Significat de Lumesis",
         titolTemporada: "Creació de temporada",
         titolComandes: "Comandes",
@@ -1748,10 +1749,16 @@ textInici3: "M’agrada escoltar les idees de cada persona, entendre què vol tr
 
 textSignificat2: "Representa aquell moment en què una idea apareix, agafa forma i es converteix en una peça única creada amb les mans i amb el cor.",
 
-textSignificat3: "Cada creació porta una mica de llum, imaginació i dedicació."
+textSignificat3: "Cada creació porta una mica de llum, imaginació i dedicació.",
+        textProjectes1: "Cada creació neix d’una idea, una inspiració i moltes hores de dedicació. En aquest espai aniré compartint els projectes que vaig fent, des de petits detalls fins a peces més especials.",
+
+textProjectes2: "Cada peça és única i està feta pensant en la persona, l’ocasió i el significat que hi ha darrere.",
         document.getElementById("text-projectes-1").innerHTML = textos[idioma].textProjectes1;
 
 document.getElementById("text-projectes-2").innerHTML = textos[idioma].textProjectes2;
+    document.getElementById("nom-projecte-1").innerHTML = textos[idioma].nomProjecte1;
+
+document.getElementById("descripcio-projecte-1").innerHTML = textos[idioma].descripcioProjecte1;
     
     },
 
@@ -1770,7 +1777,10 @@ textProjectes2: "Cada pieza es única y está hecha pensando en la persona, la o
             nomProjecte1: "Non-Non Bam",
 
 descripcioProjecte1: "Bam es una mantita de compañía hecha a mano con ganchillo, creada para acompañar a los más pequeños en sus momentos de calma y descanso. Una pieza única, hecha punto a punto con dedicación, pensada para transmitir ternura y convertirse en un pequeño recuerdo especial.",
-        titolSignificat: "Significado de Lumesis",
+        nomProjecte2: "Pendientes Thaila",
+
+descripcioProjecte2: "Una pieza creada para aportar color, alegría y personalidad a cualquier momento. Estos pendientes nacen de una idea sencilla: transformar un material como la arcilla polimérica en un pequeño detalle capaz de transmitir emociones.",
+            titolSignificat: "Significado de Lumesis",
         titolTemporada: "Creación de temporada",
         titolComandes: "Pedidos",
         titolContacte: "Contacto",
@@ -1785,7 +1795,10 @@ textInici3: "Me gusta escuchar las ideas de cada persona, entender qué quiere t
 
 textSignificat2: "Representa ese momento en el que una idea aparece, toma forma y se convierte en una pieza única creada con las manos y con el corazón.",
 
-textSignificat3: "Cada creación lleva un poco de luz, imaginación y dedicación."
+textSignificat3: "Cada creación lleva un poco de luz, imaginación y dedicación.",
+            textProjectes1: "Cada creación nace de una idea, una inspiración y muchas horas de dedicación. En este espacio iré compartiendo los proyectos que voy haciendo, desde pequeños detalles hasta piezas más especiales.",
+
+textProjectes2: "Cada pieza es única y está hecha pensando en la persona, la ocasión y el significado que hay detrás.",
     },
 
 
@@ -1803,7 +1816,10 @@ textProjectes2: "Each piece is unique and made thinking about the person, the oc
       nomProjecte1: "Non-Non Bam",
 
 descripcioProjecte1: "Bam is a handmade crochet comfort blanket, created to accompany little ones during their moments of calm and rest. A unique piece, made stitch by stitch with dedication, designed to transmit tenderness and become a special little memory.",
-    titolSignificat: "Meaning of Lumesis",
+    nomProjecte2: "Thaila Earrings",
+
+descripcioProjecte2: "A piece created to bring colour, joy and personality to any moment. These earrings are born from a simple idea: transforming a material such as polymer clay into a small detail capable of conveying emotions.",
+        titolSignificat: "Meaning of Lumesis",
     titolTemporada: "Seasonal creation",
     titolComandes: "Orders",
     titolContacte: "Contact",
@@ -1818,7 +1834,10 @@ textInici3: "I love listening to each person's ideas, understanding what they wa
 
     textSignificat2: "It represents that moment when an idea appears, takes shape and becomes a unique piece created with the hands and the heart.",
 
-    textSignificat3: "Each creation carries a little bit of light, imagination and dedication."
+    textSignificat3: "Each creation carries a little bit of light, imagination and dedication.",
+        textProjectes1: "Each creation is born from an idea, an inspiration and many hours of dedication. In this space I will share the projects I create, from small details to more special pieces.",
+
+textProjectes2: "Each piece is unique and created thinking about the person, the occasion and the meaning behind it.",
 },
 
 
@@ -1836,7 +1855,10 @@ textProjectes2: "Chaque pièce est unique et réalisée en pensant à la personn
     nomProjecte1: "Non-Non Bam",
 
 descripcioProjecte1: "Bam est une couverture de compagnie faite à la main au crochet, créée pour accompagner les plus petits dans leurs moments de calme et de repos. Une pièce unique, réalisée point par point avec dévouement, pensée pour transmettre de la tendresse et devenir un petit souvenir précieux.",
-    titolSignificat: "Signification de Lumesis",
+    nomProjecte2: "Boucles d’oreilles Thaila",
+
+descripcioProjecte2: "Une pièce créée pour apporter de la couleur, de la joie et de la personnalité à chaque moment. Ces boucles d’oreilles naissent d’une idée simple : transformer une matière comme l’argile polymère en un petit détail capable de transmettre des émotions.",
+        titolSignificat: "Signification de Lumesis",
     titolTemporada: "Création de saison",
     titolComandes: "Commandes",
     titolContacte: "Contact",
@@ -1851,7 +1873,10 @@ textInici3: "J’aime écouter les idées de chaque personne, comprendre ce qu�
 
     textSignificat2: "Cela représente ce moment où une idée apparaît, prend forme et devient une pièce unique créée avec les mains et le cœur.",
 
-    textSignificat3: "Chaque création porte une touche de lumière, d’imagination et de dévouement."
+    textSignificat3: "Chaque création porte une touche de lumière, d’imagination et de dévouement.",
+        textProjectes1: "Chaque création naît d’une idée, d’une inspiration et de nombreuses heures de dévouement. Dans cet espace, je partagerai les projets que je réalise, des petits détails aux pièces plus spéciales.",
+
+textProjectes2: "Chaque pièce est unique et créée en pensant à la personne, à l’occasion et à la signification qui se cache derrière.",
 }
 
 };
@@ -1890,6 +1915,10 @@ document.getElementById("text-significat-1").innerHTML = textos[idioma].textSign
 document.getElementById("text-significat-2").innerHTML = textos[idioma].textSignificat2;
 
 document.getElementById("text-significat-3").innerHTML = textos[idioma].textSignificat3;
+
+document.getElementById("text-projectes-1").innerHTML = textos[idioma].textProjectes1;
+
+document.getElementById("text-projectes-2").innerHTML = textos[idioma].textProjectes2;
 
 }
 
