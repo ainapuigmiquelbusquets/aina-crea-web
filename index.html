@@ -1453,7 +1453,33 @@ let fotosProjecte2 = [
 
 let fotoActual2 = 0;
 
+function canviarFoto2(direccio){
 
+    fotoActual2 = fotoActual2 + direccio;
+
+    if(fotoActual2 < 0){
+        fotoActual2 = fotosProjecte2.length - 1;
+    }
+
+    if(fotoActual2 >= fotosProjecte2.length){
+        fotoActual2 = 0;
+    }
+
+    let imatge = document.getElementById("foto-projecte2");
+
+    imatge.style.opacity = "0";
+
+    setTimeout(function(){
+
+        imatge.src = fotosProjecte2[fotoActual2];
+        imatge.style.opacity = "1";
+
+        document.getElementById("contador2").innerHTML =
+        (fotoActual2 + 1) + " / " + fotosProjecte2.length;
+
+    },200);
+
+}
 let paginaProjectes = 0;
 
 
