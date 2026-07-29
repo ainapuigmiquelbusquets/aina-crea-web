@@ -1433,11 +1433,10 @@ if(resposta.ok){
 formulari.innerHTML = `
 
 <div style="text-align:center; padding:30px;">
-
-<h2>Gràcies per contactar amb Lumesis 🤍</h2>
+<h2>${missatgeFormulari[idiomaActual].titol}</h2>
 
 <p>
-He rebut la teva idea i em posaré en contacte amb tu per acabar de definir tots els detalls i crear una peça única pensada especialment per a tu.
+${missatgeFormulari[idiomaActual].text}
 </p>
 
 </div>
@@ -1685,7 +1684,29 @@ function canviarFoto4(direccio){
 
 </script>
   <script>
+const missatgeFormulari = {
 
+ca: {
+titol: "Gràcies per contactar amb Lumesis 🤍",
+text: "He rebut la teva idea i em posaré en contacte amb tu per acabar de definir tots els detalls i crear una peça única pensada especialment per a tu."
+},
+
+es: {
+titol: "Gracias por contactar con Lumesis 🤍",
+text: "He recibido tu idea y me pondré en contacto contigo para terminar de definir todos los detalles y crear una pieza única pensada especialmente para ti."
+},
+
+en: {
+titol: "Thank you for contacting Lumesis 🤍",
+text: "I have received your idea and I will contact you to define all the details and create a unique piece specially designed for you."
+},
+
+fr: {
+titol: "Merci d'avoir contacté Lumesis 🤍",
+text: "J'ai bien reçu votre idée et je vous contacterai afin de définir tous les détails et créer une pièce unique spécialement pensée pour vous."
+}
+
+};
 let idiomaActual = "ca";
 
 
