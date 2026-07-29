@@ -1714,15 +1714,68 @@ function canviarIdioma(idioma){
     idiomaActual = idioma;
 
 
-    const textos = {
+const textos = {
 
-        ca: {
-            inici: "Inici",
-            significat: "Significat",
-            projectes: "Projectes",
-            comandes: "Comandes",
-            contacte: "Contacte"
-        },
+    ca: {
+        inici: "Inici",
+        significat: "Significat",
+        projectes: "Projectes",
+        comandes: "Comandes",
+        contacte: "Contacte",
+
+        titolProjectes: "Els meus projectes",
+        titolSignificat: "Significat de Lumesis",
+        titolTemporada: "Creació de temporada",
+        titolComandes: "Comandes",
+        titolContacte: "Contacte"
+    },
+
+
+    es: {
+        inici: "Inicio",
+        significat: "Significado",
+        projectes: "Proyectos",
+        comandes: "Pedidos",
+        contacte: "Contacto",
+
+        titolProjectes: "Mis proyectos",
+        titolSignificat: "Significado de Lumesis",
+        titolTemporada: "Creación de temporada",
+        titolComandes: "Pedidos",
+        titolContacte: "Contacto"
+    },
+
+
+    en: {
+        inici: "Home",
+        significat: "Meaning",
+        projectes: "Projects",
+        comandes: "Orders",
+        contacte: "Contact",
+
+        titolProjectes: "My projects",
+        titolSignificat: "Meaning of Lumesis",
+        titolTemporada: "Seasonal creation",
+        titolComandes: "Orders",
+        titolContacte: "Contact"
+    },
+
+
+    fr: {
+        inici: "Accueil",
+        significat: "Signification",
+        projectes: "Projets",
+        comandes: "Commandes",
+        contacte: "Contact",
+
+        titolProjectes: "Mes projets",
+        titolSignificat: "Signification de Lumesis",
+        titolTemporada: "Création de saison",
+        titolComandes: "Commandes",
+        titolContacte: "Contact"
+    }
+
+};
 
 
         es: {
@@ -1763,6 +1816,15 @@ function canviarIdioma(idioma){
     document.getElementById("menu-comandes").innerHTML = textos[idioma].comandes;
 
     document.getElementById("menu-contacte").innerHTML = textos[idioma].contacte;
+      document.getElementById("titol-projectes").innerHTML = textos[idioma].titolProjectes;
+
+document.getElementById("titol-significat").innerHTML = textos[idioma].titolSignificat;
+
+document.getElementById("titol-temporada").innerHTML = textos[idioma].titolTemporada;
+
+document.getElementById("titol-comandes").innerHTML = textos[idioma].titolComandes;
+
+document.getElementById("titol-contacte").innerHTML = textos[idioma].titolContacte;
 
 
 }
