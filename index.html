@@ -1328,48 +1328,40 @@ id="formulari-lumesis">
 
 
 <input 
+id="input-nom"
 type="text" 
 name="Nom"
 placeholder="Nom"
 required>
 
 
-<select name="Tipus de creació" required>
+<select id="select-creacio" name="Tipus de creació" required>
+<option id="opcio-tipus" value="">Tipus de creació</option>
+<option id="opcio-ganxet">🧶 Ganxet (especialitat)</option>
 
-<option value="">Tipus de creació</option>
+<option id="opcio-aquarella">🎨 Aquarel·la</option>
 
-<option>🧶 Ganxet (especialitat)</option>
+<option id="opcio-argila">🪴 Argila polimèrica</option>
 
-<option>🎨 Aquarel·la</option>
+<option id="opcio-espelmes">🕯️ Espelmes</option>
 
-<option>🪴 Argila polimèrica</option>
+<option id="opcio-suggerencia">🌸 Suggerència</option>
 
-<option>🕯️ Espelmes</option>
-
-<option>🌸 Suggerència</option>
-
-<option>✨ Creació de temporada</option>
+<option id="opcio-temporada">✨ Creació de temporada</option>
 
 </select>
-
-
-
 <textarea 
+id="textarea-idea"
 name="Descripció de la idea"
 placeholder="Descripció de la idea"
 required></textarea>
-
-
-
 <input 
+id="input-correu"
 type="email" 
 name="Correu"
 placeholder="Correu"
 required>
-
-
-
-<button type="submit">
+<button id="boto-enviar" type="submit">
 Enviar
 </button>
 
