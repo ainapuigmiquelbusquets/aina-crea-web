@@ -45,10 +45,42 @@
 .logo-menu {
 
     font-family: Georgia, serif;
-
     font-size: 28px;
-
     color: #b88b62;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+}
+
+.consulta-botiga {
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #5b4a4a;
+
+}
+
+.boto-botiga {
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #5b4a4a;
+    text-decoration: none;
+
+    border: 1px solid #b88b62;
+    padding: 8px 14px;
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+
+}
+
+.boto-botiga:hover {
+
+    background-color: #b88b62;
+    color: white;
 
 }
 
@@ -864,11 +896,18 @@ color: #8b6b55;
     gap: 10px;
 
 }
-
-
 .logo-menu {
 
     font-size: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+
+}
+
+.consulta-botiga {
+
+    flex-basis: auto;
 
 }
 
@@ -921,9 +960,21 @@ color: #8b6b55;
 <body>
     <nav class="menu">
 
-    <div class="logo-menu">
-        Lumesis
-    </div>
+<div class="logo-menu">
+
+    <span>LUMESIS</span>
+
+    <span class="consulta-botiga">
+        Consulta la
+    </span>
+
+    <a
+        href="https://ainapuigmiquelbusquets.github.io/botiga-lumesis/"
+        class="boto-botiga">
+        BOTIGA ONLINE
+    </a>
+
+</div>
 
     <div class="enllacos-menu">
 
